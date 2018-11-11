@@ -127,7 +127,9 @@ app.post('/users/login', (req, res) => {
             res.header('x-auth', token).send(user);
         });
     }).catch((e) => {
-        res.send(400).send();
+       // res.send(400).send();
+    //    res.sendStatus(400).send();
+       res.sendStatus(400);
     });
 });
 
